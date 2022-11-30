@@ -1,0 +1,58 @@
+@use './src/scss' as *;
+
+.service {
+  padding: 80px 0;
+  background: linear-gradient(to bottom, HSLA(0, 0%, 50%, 0.2), HSLA(0, 0%, 50%, 0) 20rem);
+
+  &__title {
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+
+  &__titles {
+    padding: 0 40px;
+
+    @include breakpoint-down(800px) {
+      padding: 0;
+    }
+
+    & > * {
+      display: block;
+      margin-bottom: 1.5rem;
+      opacity: 0.8;
+    }
+  }
+
+  &__list {
+    list-style: unset;
+    padding-left: 20px;
+    margin-bottom: 6rem;
+  }
+
+  &__title-sc {
+    font-weight: 600;
+    font-size: 28px;
+
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+  &__txt-big {
+    font-weight: 500;
+    font-size: 26px;
+
+    @include mobile {
+      font-size: 22px;
+    }
+  }
+  &__txt {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  &__desc {
+    font-size: 16px;
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,613 @@
+@use './src/scss' as *;
+
+.company {
+  .about {
+    color: #fff;
+
+    &__wrapper {
+      padding: 120px 20px 0;
+      background-image: linear-gradient(to top, hsla(0, 0%, 0%, 0.85), hsla(0, 0%, 5%, 0.55)), url(https://www.unicraft.org/style/img/bg/about_leader.jpg);
+      background-size: cover;
+      background-position: bottom center;
+      background-color: #333;
+
+      @include mobile {
+        padding: 60px 0 0;
+      }
+
+      .container {
+        border-bottom: 1px solid rgba(128,128,128,0.25);
+
+        @include tablet {
+          flex-direction: column;
+        }
+      }
+    }
+
+    .container {
+      max-width: 1300px;
+    }
+
+    &__titles {
+      flex: 1;
+      text-align: justify;
+    }
+    &__title {
+      font-weight: 600;
+      font-size: 50px;
+      margin-bottom: 20px;
+
+      @include mobile {
+        font-size: 32px;
+      }
+    }
+    &__desc {
+      max-width: 800px;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 140px;
+
+      @include tablet {
+        margin-bottom: 30px;
+      }
+      @include mobile {
+        font-size: 15px;
+      }
+    }
+
+    &__imgs {
+      justify-content: flex-end;
+      margin-top: auto;
+    }
+    &__txt {
+      display: block;
+      text-align: end;
+
+      span {
+        font-weight: 600;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+    }
+    .txt1 {
+      @include tablet {
+        display: none;
+      }
+    }
+    .txt2 {
+      @include breakpoint-down(2600px) {
+        display: none;
+      }
+      @include tablet {
+        display: block;
+        padding-bottom: 40px;
+        margin-top: auto;
+      }
+    }
+
+    .mission {
+      padding-top: 8rem;
+      padding-bottom: 40px;
+      background-color: #333;
+      background-image: linear-gradient(to top, HSLA(0, 0%, 0%, 0.4), HSLA(0, 0%, 0%, 0.85)), url(https://www.unicraft.org/style/img/bg/about_mission.jpg);
+      color: #fff;
+      background-position: top center;
+
+      &__title {
+        display: block;
+        font-weight: 600;
+        font-size: 22px;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #fff;
+      }
+      &__desc {
+        max-width: 1150px;
+        font-size: 36px;
+
+        @include tablet {
+          font-size: 28px;
+        }
+        @include mobile {
+          font-size: 22px;
+        }
+      }
+    }
+
+    .prinsip {
+      padding: 50px 0;
+      color: $txt-color;
+
+      &__title {
+        font-size: 22px;
+        padding-bottom: 5px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #ebebeb;
+      }
+
+      &__list {
+        gap: 20px;
+
+        @include breakpoint-down(1150px) {
+          justify-content: center;
+        }
+        @include breakpoint-down(900px) {
+          gap: 30px;
+        }
+        @include breakpoint-down(710px) {
+          justify-content: space-between;
+        }
+      }
+
+      .item {
+        max-width: 250px;
+
+        @include breakpoint-down(1150px) {
+          max-width: 400px;
+        }
+        @include breakpoint-down(900px) {
+          max-width: 300px;
+        }
+        @include breakpoint-down(710px) {
+          max-width: 250px;
+        }
+
+        &__title {
+          font-size: 24px;
+          margin-bottom: 20px;
+
+          @include breakpoint-down(710px) {
+            font-size: 20px;
+          }
+        }
+        &__desc {
+          font-size: 16px;
+
+          @include breakpoint-down(710px) {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.partners {
+
+  &__inner {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    background-image: linear-gradient(to top, HSLA(0, 0%, 100%, 1), HSLA(0, 0%, 100%, 0.8)), url(https://www.unicraft.org/style/img/bg/partner_bg.jpg);
+    background-repeat: no-repeat;
+  }
+
+  &__titles {
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 50px;
+    margin-bottom: 24px;
+
+    @include tablet {
+      font-size: 38px;
+    }
+    @include mobile {
+      font-size: 26px;
+    }
+  }
+  &__desc {
+    font-size: 24px;
+    margin-bottom: 40px;
+
+    @include tablet {
+      font-size: 20px;
+    }
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+
+  &__list {
+    gap: 10px;
+    padding: 0 40px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+  
+  &__item {
+    max-width: 330px;
+    flex: 1;
+
+    @include tablet {
+      max-width: 500px;
+      margin: 0 auto;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    & > * {
+      display: block;
+    }
+
+    .fal {
+      font-size: 52px;
+      margin-bottom: 20px;
+
+      @include mobile {
+        font-size: 38px;
+      }
+    }
+
+    &-desc {
+      font-size: 20px;
+
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .material {
+    text-align: center;
+    padding: 50px 0;
+
+    &__titles {
+      margin-bottom: 40px;
+    }
+    &__title {
+      font-weight: 600;
+      font-size: 40px;
+      margin-bottom: 2rem;
+
+      @include tablet {
+        font-size: 32px;
+      }
+      @include mobile {
+        font-size: 26px;
+      }
+    }
+    &__desc {
+      font-size: 20px;
+
+      @include tablet {
+        font-size: 18px;
+      }
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+
+    &__list {
+
+    }
+
+    .item {
+      justify-content: center;
+      text-align: start;
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      @include tablet {
+        flex-direction: column-reverse;
+
+        &:nth-child(even) {
+          flex-direction: column-reverse;
+        }
+      }
+
+      &__titles {
+        width: 50%;
+        padding: 30px;
+
+        @include tablet {
+          width: 100%;
+        }
+      }
+      &__title {
+        font-weight: 600;
+        font-size: 32px;
+        margin-bottom: 1rem;
+
+        @include tablet {
+          font-size: 24px;
+        }
+
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+      &__desc {
+        font-size: 19px;
+        margin-bottom: 2rem;
+
+        @include tablet {
+          font-size: 18px;
+        }
+
+        @include mobile {
+          font-size: 16px;
+        }
+      }
+
+      &__img {
+        width: 50%;
+
+        @include tablet {
+          width: 100%;
+          padding: 0 30px;
+        }
+      }
+
+      &__inner-list {
+        flex-direction: column;
+        gap: 1rem;
+        padding-left: 1rem;
+      }
+      &__inner-item {
+        i {
+          font-size: 16px;
+          margin-right: 1rem;
+          color: #6DAFE5;
+        }
+        span {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .earn {
+    text-align: center;
+    padding: 80px 0;
+    background-image: linear-gradient(to bottom, HSLA(0, 0%, 50%, 0.2), HSLA(0, 0%, 50%, 0) 20rem);
+    box-shadow: 0 2rem 2rem -2rem hsl(0deg 0% 50% / 35%);
+
+    &__title {
+      font-weight: 600;
+      font-size: 40px;
+      margin-bottom: 2rem;
+
+      @include tablet {
+        font-size: 30px;
+      }
+      @include mobile {
+        font-size: 24px;
+      }
+    }
+
+    &__btn {
+      margin-bottom: 2rem;
+    }
+
+    &__desc {
+      max-width: 900px;
+      font-size: 19px;
+      line-height: 1.5;
+      margin: 0 auto 50px;
+
+      @include mobile {
+        font-size: 17px;
+      }
+    }
+
+    &__list {
+      gap: 30px;
+    }
+
+    &__img {
+      width: 200px;
+      object-fit: contain;
+
+      @include mobile {
+        width: 130px;
+      }
+    }
+  }
+}
+
+.contacts {
+  padding: 50px 0;
+
+  .container {
+    max-width: 1100px;
+  }
+
+  &__titles {
+    padding: 60px 0;
+
+    @include mobile {
+      padding-top: 40px;
+      padding-bottom: 10px;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 50px;
+    margin-bottom: 1.5rem;
+
+    @include tablet {
+      font-size: 38px;
+    }
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+  &__desc {
+    font-size: 24px;
+
+    @include tablet {
+      font-size: 20px;
+    }
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+
+  .info {
+    padding: 30px 0;
+
+    &__wrapper {
+      width: 50%;
+
+      @include tablet {
+        width: 100%;
+        padding: 20px;
+      }
+    }
+
+    &__title {
+      font-weight: 600;
+      font-size: 28px;
+      margin-bottom: 1rem;
+
+      @include tablet {
+        font-size: 24px;
+      }
+      @include mobile {
+        font-size: 20px;
+      }
+    }
+    &__tel {
+      font-size: 24px;
+      margin-bottom: 1rem;
+      color: $txt-color;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #6DAFE5;
+      }
+
+      @include tablet {
+        font-size: 20px;
+      }
+      @include mobile {
+        font-size: 18px;
+      }
+    }
+    &__mail {
+      display: block;
+      color: $txt-color;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #6DAFE5;
+      }
+    }
+    &__desc {
+      font-size: 17px;
+      font-style: normal;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+
+      @include mobile {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .form {
+    padding: 30px 0;
+
+    &__title {
+      display: block;
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 2rem;
+
+      @include mobile {
+        font-size: 20px;
+      }
+    }
+
+    &__wrapper {
+      padding: 2rem;
+      border-radius: 5px;
+      border: 2px solid #6DAFE5;
+
+      @include mobile {
+        padding: 1.3rem;
+      }
+    }
+
+    &__inps {
+      width: 35%;
+      padding-right: 2rem;
+
+      @include breakpoint-down(950px) {
+        width: 100%;
+        padding: 0;
+      }
+    }
+    &__areas {
+      width: 65%;
+
+      @include breakpoint-down(950px) {
+        width: 100%;
+      }
+    }
+
+    &__inp {
+      font-size: 16px;
+
+      @include breakpoint-down(950px) {
+        margin-bottom: 5px;
+      }
+      @include mobile {
+        font-size: 15px;
+      }
+
+      &::placeholder {
+        font-size: 16px;
+
+        @include mobile {
+          font-size: 15px;
+        }
+      }
+    }
+
+    &__area {
+      height: 290px;
+      padding: 10px 1rem;
+      margin-bottom: 2px;
+      resize: vertical;
+    }
+    
+    &__btn {
+      font-weight: 700;
+      font-size: 16px ;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      margin: 0 1rem 0 0;
+      border-radius: 5px;
+      background: #6DAFE5;
+
+      @include breakpoint-down(656px) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__txt {
+      font-size: 14px;
+      color: #8c8c8c;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

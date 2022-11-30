@@ -1,0 +1,146 @@
+@use '../../../scss/index' as *;
+
+.letstry {
+  position: relative;
+  padding: 80px 0;
+  overflow-x: hidden;
+
+  @include breakpoint-down(780px) {
+    padding-bottom: 0;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+
+    @include breakpoint-down(1200px) {
+      left: 2%;
+    }
+
+    @include mobile {
+      width: 140px;
+      height: 140px;
+    }
+
+    img {
+      position: absolute;
+    }
+
+    .circle {
+      top: 0;
+      left: 0;
+      animation: circle 5s infinite linear;
+
+      @keyframes circle {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .txt {
+      width: 90%;
+    }
+
+    .phone {
+      width: 20%;
+      height: 20%;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    justify-content: center;
+
+    @include breakpoint-down(1090px) {
+      flex-direction: row-reverse;
+      justify-content: unset;
+    }
+
+    @include breakpoint-down(888px) {
+      flex-direction: unset;
+      justify-content: center;
+    }
+  }
+
+  &__img {
+    position: relative;
+    top: -30px;
+    left: 20px;
+    z-index: -1;
+
+    @include breakpoint-down(1090px) {
+      position: absolute;
+    }
+
+    @include breakpoint-down(888px) {
+      position: relative;
+    }
+
+    @include breakpoint-down(730px) {
+      left: 50px;
+    }
+  }
+
+  .content {
+    width: 480px;
+    text-align: center;
+    padding: 32px;
+    border-radius: 8px;
+    border: 1px solid #F2F2F2;
+    background: #ffffff;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 5px 40px -5px rgb(106 173 227 / 35%);
+    }
+
+    @include breakpoint-down(780px) {
+      position: relative;
+      top: -80px;
+      width: 100%;
+    }
+    @include mobile {
+      padding: 20px;
+    }
+
+    &__title {
+      font-weight: 600;
+      font-size: 40px;
+      margin-bottom: 20px;
+
+      @include mobile {
+        font-size: 30px;
+      }
+
+      @include breakpoint-down(366px) {
+        font-size: 26px;
+      }
+    }
+
+    &__desc {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+
+    &__btn {
+      padding: 1rem 40px;
+      margin-top: 10px;
+
+      @include mobile {
+        font-size: 18px;
+        padding: 1.5rem 20px;
+      }
+    }
+  }
+}
+
+
+

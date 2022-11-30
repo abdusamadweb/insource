@@ -1,0 +1,60 @@
+@use './src/scss' as *;
+
+.hero {
+  height: 100vh;
+  overflow: hidden;
+
+  .hero-bg {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, hsla(0, 0%, 0%, 0.1), hsla(200, 52%, 16%, 0.89)), url(https://www.unicraft.org/static/video/vh1/poster.webp);
+    background-size: cover;
+    background-position: bottom center;
+    z-index: -2;
+  }
+
+  #tsparticles {
+    canvas {
+      position: absolute;
+      z-index: -1;
+    }
+  }
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  &__titles {
+    text-align: center;
+    margin-top: 1rem;
+    color: #fff;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 52px;
+    margin-bottom: 1.5rem;
+
+    @include tablet {
+      font-size: 44px;
+    }
+    @include mobile {
+      font-size: 36px;
+    }
+  }
+  &__desc {
+    font-size: 28px;
+
+    @include tablet {
+      font-size: 24px;
+    }
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+}

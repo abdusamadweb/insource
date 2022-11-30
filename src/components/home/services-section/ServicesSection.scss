@@ -1,0 +1,95 @@
+@use './src/scss' as *;
+
+.services {
+  padding: 80px 0;
+  background-image: url(https://www.unicraft.org/style/img/wehaveall_bg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include breakpoint-down(680px) {
+    padding-bottom: 30px;
+  }
+
+  &__inner {
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 3rem;
+
+    @include mobile {
+      font-size: 32px;
+    }
+  }
+
+  &__list {
+    gap: 40px;
+
+    @include tablet {
+      gap: 1rem;
+    }
+    @include breakpoint-down(880px) {
+      gap: 0;
+    }
+    @include breakpoint-down(680px) {
+      max-width: 420px;
+      gap: 30px;
+      margin: 0 auto;
+    }
+    @include mobile {
+      max-width: unset;
+      flex-flow: column;
+      align-items: center;
+    }
+  }
+
+  .item {
+    width: 150px;
+
+    @include breakpoint-down(880px) {
+      width: 120px;
+    }
+    @include breakpoint-down(680px) {
+      width: 120px;
+    }
+    @include mobile {
+      width: 150px;
+    }
+
+    &:hover .item__title {
+      color: #6DAFE5;
+    }
+    
+    .fal {
+      font-size: 50px;
+      padding: 2rem;
+      margin-bottom: 1rem;
+      border-radius: 50%;
+      border: 1px solid #6DAFE5;
+      color: $txt-color;
+
+      @include breakpoint-down(880px) {
+        font-size: 40px;
+        padding: 1.5rem;
+      }
+      @include mobile {
+        font-size: 48px;
+        padding: 3rem;
+      }
+    }
+    &__title {
+      display: block;
+      font-weight: 500;
+      font-size: 18px;
+      color: $txt-color;
+      transition: color 0.3s ease;
+    }
+    &__txt {
+      font-size: 15px;
+      color: #7cb83d;
+    }
+  }
+}
