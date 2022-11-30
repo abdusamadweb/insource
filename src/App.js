@@ -46,7 +46,7 @@ function App() {
               ref={tawkMessengerRef}
               onLoad={onLoad}
           />
-          <Routes>
+          <Routes history={BrowserRouter}>
             <Route path='/' element={<Home />} />
             <Route path='/functional' element={<Functional />} />
             <Route path='/company' element={<Company />} />
