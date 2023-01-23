@@ -1,0 +1,60 @@
+.portfolio-page {
+
+  .gallery {
+    padding-top: 120px;
+    padding-bottom: 80px;
+
+    .container {
+      max-width: 1300px;
+    }
+
+    &__inner {
+      text-align: center;
+    }
+
+    &__title {
+      position: relative;
+      right: 15px;
+      font-weight: 600;
+      font-size: 40px;
+      margin-bottom: 4rem;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 70px;
+    }
+
+    .item {
+      max-width: 380px;
+
+      &__title {
+        height: 80px;
+        font-weight: 600;
+        font-size: 22px;
+      }
+
+      &__img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+      }
+
+      &__desc {
+        max-width: 400px;
+        margin-bottom: 2rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      &__btn {
+        font-size: 16px;
+        padding: 12px 2rem;
+      }
+    }
+  }
+}

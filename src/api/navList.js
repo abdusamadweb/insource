@@ -9,6 +9,11 @@ const navList = [
         link: '/about',
         ul: null
     },
+    {
+        name: 'Portfolio',
+        link: '/portfolio',
+        ul: null
+    },
     // {
     //     name: 'Functional',
     //     link: '/functional',
@@ -27,14 +32,14 @@ const navList = [
             //     link: '/company/partners'
             // },
             {
-                name: 'Contacts',
-                link: '/company/contacts'
+                name: 'Support',
+                link: '/company/support',
             },
         ]
     },
     {
-        name: 'Support',
-        link: '/support',
+        name: 'Contacts',
+        link: '/contacts',
         ul: null
     }
 ]

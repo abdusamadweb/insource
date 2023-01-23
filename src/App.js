@@ -18,6 +18,7 @@ import Support from "./pages/Support";
 import {ServicesCRM, ServicesPO, ServicesSEO, ServicesTech, ServicesWEB} from "./pages/services";
 import About from "./pages/About";
 import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
+import Portfolio from "./pages/Portfolio";
 
 const Wrapper = ({children}) => {
   const location = useLocation();
@@ -46,19 +47,20 @@ function App() {
               ref={tawkMessengerRef}
               onLoad={onLoad}
           />
-          <Routes history={BrowserRouter}>
+          <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/functional' element={<Functional />} />
             <Route path='/company' element={<Company />} />
             <Route path='/company/partners' element={<CompanyPartners />} />
-            <Route path='/company/contacts' element={<CompanyContacts />} />
-            <Route path='/support' element={<Support />} />
+            <Route path='/company/support' element={<Support />} />
+            <Route path='/contacts' element={<CompanyContacts />} />
             <Route path='/services/crm' element={<ServicesCRM />} />
             <Route path='/services/po' element={<ServicesPO />} />
             <Route path='/services/seo' element={<ServicesSEO />} />
             <Route path='/services/web-sites' element={<ServicesWEB />} />
             <Route path='/services/tech-tasks' element={<ServicesTech />} />
             <Route path='/about' element={<About />} />
+            <Route path='/portfolio' element={<Portfolio />} />
           </Routes>
           <Footer />
         </Wrapper>

@@ -26,14 +26,14 @@ const Hero = () => {
                     },
                     "particles": {
                         "number": {
-                            "value": 80,
+                            "value": 70,
                             "density": {
                                 "enable": false,
                                 "value_area": 800
                             }
                         },
                         "color": {
-                            "value": "#fff"
+                            "value": "#ffffff"
                         },
                         "shape": {
                             "type": "circle",
@@ -46,13 +46,13 @@ const Hero = () => {
                             },
                             "image": {
                                 "src": "img/github.svg",
-                                "width": 100,
-                                "height": 100
+                                "width": 50,
+                                "height": 50
                             }
                         },
                         "opacity": {
                             "value": 0.5,
-                            "random": false,
+                            "random": true,
                             "anim": {
                                 "enable": true,
                                 "speed": 0.5,
@@ -61,12 +61,12 @@ const Hero = () => {
                             }
                         },
                         "size": {
-                            "value": 3,
-                            "random": false,
+                            "value": 3.5,
+                            "random": true,
                             "anim": {
-                                "enable": true,
+                                "enable": false,
                                 "speed": 10,
-                                "size_min": 0.5,
+                                "size_min": 0.1,
                                 "sync": false
                             }
                         },
@@ -75,16 +75,15 @@ const Hero = () => {
                             "distance": 150,
                             "color": "#ffffff",
                             "opacity": 0.4,
-                            "width": 1,
+                            "width": 1
                         },
                         "move": {
                             "enable": true,
-                            "speed": 1,
+                            "speed": 1.3,
                             "direction": "none",
                             "random": false,
                             "straight": false,
                             "out_mode": "out",
-                            "bounce": false,
                             "attract": {
                                 "enable": false,
                                 "rotateX": 600,
@@ -120,8 +119,7 @@ const Hero = () => {
                                 "speed": 3
                             },
                             "repulse": {
-                                "distance": 200,
-                                "duration": 0.4
+                                "distance": 200
                             },
                             "push": {
                                 "particles_nb": 4
@@ -132,12 +130,13 @@ const Hero = () => {
                         }
                     },
                     "retina_detect": true,
-                    "background": {
-                        "color": "",
-                        "image": '',
-                        "position": "50% 50%",
-                        "repeat": "no-repeat",
-                        "size": "cover"
+                    "config_demo": {
+                        "hide_card": false,
+                        "background_color": "#b61924",
+                        "background_image": "",
+                        "background_position": "50% 50%",
+                        "background_repeat": "no-repeat",
+                        "background_size": "cover"
                     }
                 }}
             />

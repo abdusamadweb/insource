@@ -1,5 +1,5 @@
 import '../../components/services/Services.scss'
-import React, {useRef} from 'react';
+import React from 'react';
 
 const ServicesTech = () => {
 

@@ -3,7 +3,7 @@ import React from 'react';
 
 import Slider from "react-slick";
 
-const NextArrow = ({ className, style, onClick }) => {
+const NextArrow = ({ className, onClick }) => {
     return (
         <div className={className} onClick={onClick}>
             <i className="far fa-arrow-alt-right"/>
@@ -11,7 +11,7 @@ const NextArrow = ({ className, style, onClick }) => {
     );
 }
 
-const PrevArrow = ({ className, style, onClick }) => {
+const PrevArrow = ({ className, onClick }) => {
     return (
         <div className={className} onClick={onClick}>
             <i className="far fa-arrow-alt-left"/>
@@ -61,8 +61,8 @@ const PartnerSection = () => {
             src: 'https://cdn-bejdi.nitrocdn.com/JfYsxiGleSWSjVdqpiMdxKosrlRYQOzl/assets/static/optimized/rev-7c1b4b8/wp-content/uploads/2020/05/header-log.svg'
         },
         {
-            name: 'kapital-bank',
-            src: 'https://logobank.uz:8005/media/logos_png/KAPITALBANK-01.png'
+            name: 'epam',
+            src: 'https://cdn.jugru.org/misc/meetups/2021/epam/1/EPAM_LOGO_Primary.png'
         },
         {
             name: 'data-site',
@@ -71,6 +71,14 @@ const PartnerSection = () => {
         {
             name: 'pdp-academy',
             src: 'https://logobank.uz:8005/media/logos_preview/PDP_IT_Academy-01.png'
+        },
+        {
+            name: 'kapital-bank',
+            src: 'https://logobank.uz:8005/media/logos_png/KAPITALBANK-01.png'
+        },
+        {
+            name: 'exadel',
+            src: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Exadel_logo.png'
         },
     ]
 

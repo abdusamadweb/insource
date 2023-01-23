@@ -17,7 +17,9 @@ const AboutServices = () => {
                         servicesList.map((item, i) => (
                             <li className='services__item item itemm' key={i}>
                                 <Link to={item.url} onClick={scrolltoTop}>
-                                    <i className={item.icon}/>
+                                    <div className="icon">
+                                        <i className={item.icon}/>
+                                    </div>
                                     <span className='item__title'>{ item.title }</span>
                                     <span className='item__txt'>More</span>
                                     <p className="itemm__desc">{ item.desc }</p>

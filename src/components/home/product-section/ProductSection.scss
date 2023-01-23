@@ -76,8 +76,13 @@
     }
 
     &__desc {
+      height: 55px;
       font-size: 16px;
       margin-bottom: 3rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
 
       @include mobile {
         padding: 0 30px;
@@ -85,6 +90,7 @@
     }
 
     &__btn {
+      display: inline-block;
       font-size: 18px;
       padding: 10px 30px;
     }

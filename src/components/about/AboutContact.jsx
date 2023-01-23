@@ -10,7 +10,7 @@ const AboutContact = () => {
                     <div className='page__contact contact'>
                         <div>
                             <span className='contact__title'>Режим работы:</span>
-                            <span className='contact__txt'>Пн-Пт с 10:00 до 18:30</span>
+                            <span className='contact__txt'>Пн-Пт с 09   :00 до 18:30</span>
                         </div>
                         <div>
                             <a className='contact__link' href='tel:+998336567770'>
@@ -26,7 +26,7 @@ const AboutContact = () => {
                         </div>
                         <div className='row'>
                             <span className='contact__title contact__hover'>Адрес:</span>
-                            <address className='contact__address'>Insource System, 100100, <br/> Узбекистан город Ташкент, улица Эхтиром-2, д.8</address>
+                            <address className='contact__address'>Сергелийский район,Ташкент, Узбекистан</address>
                         </div>
                     </div>
                 </div>

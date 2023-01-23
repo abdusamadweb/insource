@@ -62,24 +62,41 @@
     &:hover .item__title {
       color: #6DAFE5;
     }
-    
-    .fal {
-      font-size: 50px;
-      padding: 2rem;
-      margin-bottom: 1rem;
+
+    .icon {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 1rem auto;
       border-radius: 50%;
       border: 1px solid #6DAFE5;
-      color: $txt-color;
 
       @include breakpoint-down(880px) {
-        font-size: 40px;
-        padding: 1.5rem;
+        width: 100px;
+        height: 100px;
       }
       @include mobile {
-        font-size: 48px;
-        padding: 3rem;
+        width: 120px;
+        height: 120px;
+      }
+
+      .fal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        color: $txt-color;
+
+        @include breakpoint-down(880px) {
+          font-size: 40px;
+        }
+        @include mobile {
+          font-size: 48px;
+        }
       }
     }
+
     &__title {
       display: block;
       font-weight: 500;

@@ -44,10 +44,10 @@ const About = () => {
                                 <br/>
                                 Успехов!
                             </p>
-                            <span className='about__txt txt1'><span>Ilhom Mannopov</span> <br/> Основатель компании Insource</span>
+                            <span className='about__txt txt1'><span>Ilhom Mannonov</span> <br/> Основатель компании Insource</span>
                         </div>
                         <div className='about__imgs row'>
-                            <span className='about__txt txt2'><span>Ilhom Mannopov</span> <br/> Основатель компании Insource</span>
+                            <span className='about__txt txt2'><span>Ilhom Mannonov</span> <br/> Основатель компании Insource</span>
                         </div>
                     </div>
                 </div>

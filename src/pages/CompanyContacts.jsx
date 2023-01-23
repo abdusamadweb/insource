@@ -4,6 +4,26 @@ import '../components/company/Company.scss'
 import MyInput from "../components/UI/input/MyInput";
 
 const CompanyContacts = () => {
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        const {name, phone, organization, email, message} = (e.target.elements)
+        const newMessage = `
+          %0A username: ${name.value},
+          %0A phone: ${phone.value},
+          %0A organization: ${organization.value},
+          %0A email: ${email.value},
+          %0A message: ${message.value}
+        `
+
+        fetch(`https://api.telegram.org/bot5843802594:AAFIqrQcfO85FPNwoy6gOo1Dlvp66SnFlv4/sendMessage?chat_id=5450434747&text=${newMessage}`)
+name.value = null
+        phone.value = null
+        organization.value = null
+        email.value = null
+        message.value = null
+    }
     return (
         <div className='contacts'>
             <div className="container">
@@ -22,36 +42,35 @@ const CompanyContacts = () => {
                             <div className='info__wrapper'>
                                 <h3 className='info__title'>Реквизиты</h3>
                                 <p className='info__desc'>Общество с ограниченной ответственностью "Insource System”</p>
-                                <address className='info__desc'>Юр. адрес: 123458, Москва г, Твардовского ул, дом 8, строение 1, помещение I ЭТ 3 КОМ 7</address>
+                                <address className='info__desc'>Сергелийский район,Ташкент, Узбекистан</address>
                                 <p className='info__desc'>
-                                    Расчетный счет: 40702810202500064712 <br/>
-                                    Банк: ТОЧКА ПАО БАНКА "ФК ОТКРЫТИЕ" <br/>
-                                    БИК: 044525999 <br/>
-                                    Kорр. счет: 30101810845250000999
+                                    Расчетный счет: 20208000605590595001 <br/>
+                                    Банк: ТОЧКА ПАО БАНКА "KAPITALBANK" <br/>
+
                                 </p>
-                                <p className="info__desc">Генеральный директор: Маслов Артем Андреевич</p>
+                                <p className="info__desc">Генеральный директор: Ilhom Mannonov</p>
                             </div>
                         </div>
                     </div>
-                    <form className="contacts__form form">
+                    <form className="contacts__form form" onSubmit={handleSubmit}>
                         <span className='form__title'>Есть вопросы? Пишите!</span>
                         <div className='form__wrapper row'>
                             <div className='form__inps'>
                                 <label>
-                                    <MyInput className='form__inp' type='txt' placeholder='Имя и фамилия' />
+                                    <MyInput  className='form__inp' type='txt' name='name' placeholder='Имя и фамилия' />
                                 </label>
                                 <label>
-                                    <MyInput className='form__inp' type='txt' placeholder='Телефон' />
+                                    <MyInput  className='form__inp' type='txt' name='phone' placeholder='Телефон' />
                                 </label>
                                 <label>
-                                    <MyInput className='form__inp' type='txt' placeholder='Название организации' />
+                                    <MyInput className='form__inp' type='txt'  name='organization' placeholder='Название организации' />
                                 </label>
                                 <label>
-                                    <MyInput className='form__inp mail' type='txt' placeholder='Ваш e-mail' />
+                                    <MyInput  className='form__inp mail' type='txt' name='email' placeholder='Ваш e-mail' />
                                 </label>
                             </div>
                             <div className='form__areas'>
-                                <textarea className='form__area form__inp mail inp' placeholder='Ваше сообщение'/>
+                                <textarea  className='form__area form__inp mail inp' name='message' placeholder='Ваше сообщение'/>
                                 <div className='row align-center'>
                                     <button className='form__btn btn'>отправить</button>
                                     <p className='form__txt'>Сообщение должно быть не менее 10 символов.</p>
